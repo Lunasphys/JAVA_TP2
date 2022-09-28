@@ -35,6 +35,8 @@ public class Archimede {
     public static void In() {
         System.out.println("Vous vous appretez à rentrer deux doubles positifs");
         System.out.println("Entrez le premier double");
+        Scanner scan = new Scanner(System.in);
+        String str = scan.next();
         double x = isDouble(); // Regarde si l'input est bien un double positif
         System.out.println("Entrez le deuxieme double");
         double y = isDouble();

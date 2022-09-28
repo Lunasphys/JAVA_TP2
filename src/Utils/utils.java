@@ -114,13 +114,21 @@ public class utils {
      * @author : Jeham Laurie
      * Methode qui demande un double à l'utilisateur de donner un double. Il renvoie une erreur si ce n'est pas un double ou si c'est un double négatif et renvoit le double si c'est un double positif
      */
-    public static boolean isDouble(String str) { // Bouléen qui permet de verifier si l'input  est bien un nombre décimal
-        try {
-            Double.parseDouble(str);
-            return true;
-        } catch (NumberFormatException e) {
+    public static boolean isDouble(String string) { // Bouléen qui permet de verifier si l'input  est bien un double
+        double doubleValue;
+        System.out.printf("Verification: \"%s\"%n", string);
+        if (string == null || string.equals("") || Double.parseDouble(string) < 0) { // Si la valeur est null ou contient une string vide
+            System.out.println("Ne peut être lu");
             return false;
         }
+
+        try { // Si la chaine de caractère est bien un float renvoit : vrai
+            doubleValue = Double.parseDouble(string);
+            return true;
+        } catch (NumberFormatException e) { // // Sinon demande de réessayer avec une autre valeur
+            System.out.println("Le nombre saisi n'est pas un double, veuillez reessayer");
+        }
+        return false;
     }
 
 }
