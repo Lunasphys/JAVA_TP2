@@ -5,6 +5,13 @@ import src.Exercice1.Archimede;
 import java.sql.SQLOutput;
 import java.util.Arrays;
 
+/**
+ * @author : Jeham Laurie
+ * Class de l'exercice 1
+ * Cet exercice est la continuation de l'exercice 1 et permet de calculer la valeur de Cn et In pendant une boucle
+ * de N tours, puis en les integrant dans un tableau
+ */
+
 public class exo2 {
 
     public static void main(String[] args) {

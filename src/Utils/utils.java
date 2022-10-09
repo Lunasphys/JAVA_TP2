@@ -112,7 +112,7 @@ public class utils {
 
     /**
      * @author : Jeham Laurie
-     * Methode qui demande un double à l'utilisateur de donner un double. Il renvoie une erreur si ce n'est pas un double ou si c'est un double négatif et renvoit le double si c'est un double positif
+     * Methode qui demande à l'utilisateur de donner un double. Il renvoie une erreur si ce n'est pas un double ou si c'est un double négatif et renvoit le double si c'est un double positif
      */
     public static double isDouble() { // permet de verifier si l'input  est bien un double
         boolean is_Double = false;

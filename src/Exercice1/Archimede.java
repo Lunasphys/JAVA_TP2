@@ -12,9 +12,7 @@ import static src.Utils.utils.isDouble;
 /**
  * @author : Jeham Laurie
  * Méthode Cn de la classe Archimede
- *
- *
- *
+ * Methode qui effectue le calcul d'une racine carreen prenant en compte un double
  *
  */
 

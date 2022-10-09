@@ -2,6 +2,14 @@ package src.Exercice1;
 
 import static src.Utils.utils.isDouble;
 
+
+/**
+ * @author : Jeham Laurie
+ * Class de l'exercice 1
+ * Ecrire un programme qui prend en compte un double X et Y, puis qui calcule la valeur de Cn et In
+ * Ce programme reprend les méthodes de la classe Archimede
+ */
+
 public class exo1 {
     public static void main(String[] args) {
         System.out.println("Entrer un double positif");
