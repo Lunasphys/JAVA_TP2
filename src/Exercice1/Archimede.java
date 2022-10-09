@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 
 
+
 import static src.Utils.utils.isDouble;
 
 
@@ -22,6 +23,7 @@ public class Archimede {
     public static void Cn() {
         System.out.println("Entrer un double positif");
         double x = isDouble(); // Regarde si l'input est bien un double positif
+        System.out.println("Entrer un second double positif");
         double y = isDouble();
 
         if (x < 0 || y < 0) {
@@ -35,8 +37,6 @@ public class Archimede {
     public static void In() {
         System.out.println("Vous vous appretez à rentrer deux doubles positifs");
         System.out.println("Entrez le premier double");
-        Scanner scan = new Scanner(System.in);
-        String str = scan.next();
         double x = isDouble(); // Regarde si l'input est bien un double positif
         System.out.println("Entrez le deuxieme double");
         double y = isDouble();
