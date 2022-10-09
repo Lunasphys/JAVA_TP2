@@ -115,19 +115,28 @@ public class utils {
      * Methode qui demande un double à l'utilisateur de donner un double. Il renvoie une erreur si ce n'est pas un double ou si c'est un double négatif et renvoit le double si c'est un double positif
      */
     public static double isDouble() { // permet de verifier si l'input  est bien un double
-        Scanner scan = new Scanner(System.in);
-        while (!scan.hasNextDouble()) { // Tant que l'input n'est pas un double, renvoit un message d'erreur et scan le prochain input
-            System.out.println("Rentrez un double");
-            scan.next();
-        }
-        double nb = scan.nextDouble();
-        if (nb < 0) { // Tant que l'input n'est pas un double positif, renvoit un message d'erreur et scan le prochain input
-            System.out.println("Veuillez entrez un double positif");
-            return isDouble();
+        boolean is_Double = false;
+        double nb = 0;
+        while (is_Double != true) {
+            Scanner scan = new Scanner(System.in);
+            String str = scan.nextLine();
+            try {
+                nb = Double.parseDouble(str);
+                is_Double = true;
+                if (nb <= 0) {
+                    System.out.println("Veuillez entrez un double positif");
+                    return isDouble();
+                } else {
+                    is_Double = true;
+                    str = "";
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Rentrez un double");
+            }
         }
         return nb;
     }
-
 }
+
 
 

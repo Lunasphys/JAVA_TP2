@@ -20,32 +20,27 @@ import static src.Utils.utils.isDouble;
 
 public class Archimede {
 
-    public static void Cn() {
-        System.out.println("Entrer un double positif");
-        double x = isDouble(); // Regarde si l'input est bien un double positif
-        System.out.println("Entrer un second double positif");
-        double y = isDouble();
+    public static double Cn(double x, double y) {
 
+        double Cn = 2 * x * y / (x + y);
         if (x < 0 || y < 0) {
             System.out.println("X et Y doivent être positifs");
         } else {
-            double Cn = 2 * x * y / (x + y);
+
             System.out.println("La valeur de Cn est : " + Cn);
         }
+        return Cn;
     }
 
-    public static void In() {
-        System.out.println("Vous vous appretez à rentrer deux doubles positifs");
-        System.out.println("Entrez le premier double");
-        double x = isDouble(); // Regarde si l'input est bien un double positif
-        System.out.println("Entrez le deuxieme double");
-        double y = isDouble();
+    public static double In(double x, double y) {
+        double In = Math.sqrt(x * y);
         if (x < 0 || y < 0) {
             System.out.println("X et Y doivent être positifs");
         } else {
-            double In = Math.sqrt(x * y);
+
             System.out.println("La valeur de In est : " + In);
         }
+        return In;
     }
 }
 
