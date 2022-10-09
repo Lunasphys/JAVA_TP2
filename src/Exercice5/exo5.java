@@ -7,10 +7,15 @@ import src.Utils.utils;
 public class exo5 {
     public static void main(String[] args) {
         System.out.println("Entrer votre pseudo");
-        Scanner pseudo = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        String pseudo = scan.nextLine();
         System.out.println("Bienvenue " + pseudo + " !");
         System.out.println("Avant de commencer la partie, avec combien d'allumettes souhaitez vous jouer ? (Minima de 16 allumettes)");
         int nbAllumettes = utils.entierInt();
+        if (nbAllumettes < 16) {
+            System.out.println("Vous devez jouer avec au moins 16 allumettes");
+            System.exit(0);
+        }
         System.out.println("Vous avez choisi de jouer avec " + nbAllumettes + " allumettes");
         System.out.println("Tout d'abord, nous allons déterminer aléatoirement qui commence");
         int random = (int) (Math.random() * 2);
