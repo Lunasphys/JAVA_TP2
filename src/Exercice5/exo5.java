@@ -10,12 +10,18 @@ import static src.Utils.utils.*;
 
 /**
  * @author : Jeham Laurie
+ * @author : Maxime Obry
  * Class de l'exercice 5
  * La règle : il y a plusieurs allumettes ( supérieur ou égales à 16 ) et on en retire 1,2 ou 3 et celui qui prend la dernière a gagné. Vous jouer contre l’ordinateur
  * Le joueur de départ est choisi aléatoirement
  * (Remarque ;si l’ordinateur est le deuxième joueur il doit normalement gagner )
  */
 public class exo5 {
+    /**
+     * Fonction principale de l'exercice 5
+     *
+     * @param args Parametre de la ligne de commande(non utilisé)
+     */
     public static void main(String[] args) {
         System.out.println("-----Exercice 5 -----");
         System.out.println("Entrer votre pseudo");
