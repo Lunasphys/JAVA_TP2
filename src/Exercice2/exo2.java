@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 /**
  * @author : Jeham Laurie
- * Class de l'exercice 1
+ * Class de l'exercice 2
  * Cet exercice est la continuation de l'exercice 1 et permet de calculer la valeur de Cn et In pendant une boucle
  * de N tours, puis en les integrant dans un tableau
  */

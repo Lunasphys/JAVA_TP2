@@ -1,5 +1,6 @@
 package src.Utils;
 
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -136,6 +137,15 @@ public class utils {
         }
         return nb;
     }
+
+
+    // Méthode qui permet de savoir qui commence entre le joueur ou l'ordinateur (1 = joueur, 2 = ordinateur)
+    public static int getRandomNumber(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
+    }
+
+
+
 }
 
 
