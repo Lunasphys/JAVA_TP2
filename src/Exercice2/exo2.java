@@ -13,13 +13,25 @@ import java.util.Arrays;
  */
 
 public class exo2 {
-
+    /**
+     * Fonction principale de l'exercice 3
+     *
+     * @param args Parametre de la ligne de commande(non utilisé)
+     */
     public static void main(String[] args) {
         System.out.println("Veuillez entrer la valeur n qui definira le nombre de loop effectue :");
         int n = src.Utils.utils.entierInt();
         System.out.println("Le programme va se lancer...");
         An(n);
     }
+
+    /**
+     * Il prend un nombre n et renvoie un tableau de longueur 2n+2 contenant les n+1 premières paires de nombres (x, y) de
+     * la séquence
+     *
+     * @param n le nombre d'itérations
+     * @return Un tableau de doubles.
+     */
     public static double[] An(int n) {
         double x = 4;
         double y = 2*Math.sqrt(2);

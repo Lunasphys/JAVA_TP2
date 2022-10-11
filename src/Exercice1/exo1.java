@@ -11,6 +11,10 @@ import static src.Utils.utils.isDouble;
  */
 
 public class exo1 {
+    /**
+     * Fonction principale de l'exercice 1
+     * @param args Parametre de la ligne de commande(non utilisé)
+     */
     public static void main(String[] args) {
         System.out.println("Entrer un double positif");
         double x = isDouble(); // Regarde si l'input est bien un double positif
