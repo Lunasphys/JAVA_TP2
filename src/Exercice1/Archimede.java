@@ -14,11 +14,7 @@ import static src.Utils.utils.isDouble;
  * @author : Jeham Laurie
  */
 
-/**
- * Il contient deux méthodes statiques, Cn et In, qui prennent deux paramètres doubles et renvoient un double
- */
 public class Archimede {
-
     /**
      * La fonction Cn prend deux valeurs doubles en paramètres et retourne une valeur double
      *
