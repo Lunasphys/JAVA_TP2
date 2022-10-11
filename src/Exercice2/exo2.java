@@ -19,6 +19,7 @@ public class exo2 {
      * @param args Parametre de la ligne de commande(non utilisé)
      */
     public static void main(String[] args) {
+        System.out.println("-----Exercice 2 -----");
         System.out.println("Veuillez entrer la valeur n qui definira le nombre de loop effectue :");
         int n = src.Utils.utils.entierInt();
         System.out.println("Le programme va se lancer...");

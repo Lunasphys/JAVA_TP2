@@ -16,6 +16,7 @@ public class exo3 {
      * @param args Parametre de la ligne de commande(non utilisé)
      */
         public static void main(String[] args) {
+            System.out.println("-----Exercice 3 -----");
             System.out.println("Bonjour dans le calculateur d'impots");
             System.out.println("Veuillez entrer votre revenu annuel");
             int revenu = entierInt();

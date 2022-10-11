@@ -17,6 +17,7 @@ public class exo1 {
      * @param args Parametre de la ligne de commande(non utilisé)
      */
     public static void main(String[] args) {
+        System.out.println("-----Exercice 1 -----");
         System.out.println("Entrer un double positif");
         double x = isDouble(); // Regarde si l'input est bien un double positif
         System.out.println("Entrer un second double positif");
