@@ -27,6 +27,24 @@ public class utils {
         return nb;
     }
 
+    public static int entierInt2(int nbAllumettes) { // Permet de savoir si l'input de l'utilisateur est bien un entier
+        Scanner scan = new Scanner(System.in); // Scan l'input
+        while (!scan.hasNextInt()) { // Tant que l'input n'est pas un int, renvoit un message d'erreur et scan le prochain input
+            System.out.println("Rentrez un entier");
+            scan.next();
+        }
+        int nb = scan.nextInt();
+        if (nb > 3 || nb < 1) {
+            System.out.println("Vous ne pouvez retirer que 1, 2 ou 3 allumettes");
+            return entierInt2(nbAllumettes);
+        } else if (nb > nbAllumettes ) {
+            System.out.println("Vous ne pouvez pas retirer plus d'allumettes que ce qu'il y en a");
+            return entierInt2(nbAllumettes);
+        } else {
+            return nb;
+        }
+    }
+
     /**
      * @author Laurie Jeham
      * Méthode qui permet de retourner un bouléen en fonction de la réponse de l'utilisateur.
