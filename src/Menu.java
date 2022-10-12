@@ -23,6 +23,7 @@ public class Menu {
         System.out.println("======== Exercice 3 : Impots ==============================");
         System.out.println("======== Exercice 4 : Chance Euromillions =================");
         System.out.println("======== Exercice 5 : Jeu de Nim ==========================");
+        System.out.println("======== 6 : Pour Quitter =================================");;
         System.out.println("Quel exercice souhaitez-vous faire ?");
         int value = utils.entierInt();
         while (true) {
@@ -46,6 +47,10 @@ public class Menu {
                 case 5:
                     src.Exercice5.exo5.main(args);
                     Menu.main(args);
+                    break;
+                case 6 :
+                    System.out.println("Au revoir");
+                    System.exit(0);
                     break;
             }
             System.out.println("Veuillez entrer un nombre entre 1 et 5");
