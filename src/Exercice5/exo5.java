@@ -35,42 +35,77 @@ public class exo5 {
         }
         System.out.println("Vous avez choisi de jouer avec " + nbAllumettes + " allumettes");
         System.out.println("Le joueur qui commence est choisi aléatoirement (1 pour vous, 2 pour l'ordinateur)");
-        int turn = src.Utils.utils.getRandomNumber(1, 3);
-        System.out.println("C'est le chiffre " + turn + " qui commence");
-
+        int turn = 1;
+        int whoPlay = src.Utils.utils.getRandomNumber(1, 3);
+        System.out.println("C'est le chiffre " + whoPlay + " qui commence");
+        if (whoPlay == 1) {
             while (nbAllumettes > 0) {
-                if (turn % 2 != 0) {
-                    System.out.println("A vous de jouer");
-                    System.out.println("Il reste " + nbAllumettes + " allumettes");
-                    System.out.println("Combien d'allumettes souhaitez vous retirer ? (1, 2 ou 3)");
-                    int nbRetirer = entierInt2(nbAllumettes);
-                    nbAllumettes = nbAllumettes - nbRetirer;
-                    turn += 1;
-                    System.out.println("Il reste " + nbAllumettes + " allumettes");
-                }
-                    else if(turn % 2 == 0) {
-                    // l'ordinateur doit jouer et doit laisser au joueur un nombre d'allumettes qui sera un multiple de 4
-                    System.out.println("A l'ordinateur de jouer");
-                    int nbAllumettesRetireesOrdi;
-                    if (nbAllumettes % 4 == 0) {
-                        System.out.println("L'ordinateur retire 3 allumettes");
-                        nbAllumettes -= 3;
-                    } else if (nbAllumettes % 4 == 3) {
-                        System.out.println("L'ordinateur retire 2 allumette");
-                        nbAllumettes -= 2;
-                    } else if (nbAllumettes % 4 == 2) {
-                        System.out.println("L'ordinateur retire 1 allumettes");
-                        nbAllumettes -= 1;
-                    } else {
-                        Random rand = new Random();
-                        nbAllumettesRetireesOrdi = rand.nextInt(3) + 1;
-                        nbAllumettes -= nbAllumettesRetireesOrdi;
-                        System.out.println("L'ordinateur retire " + nbAllumettesRetireesOrdi + "allumettes");
+                    if (turn % 2 != 0) {
+                        System.out.println("A vous de jouer");
+                        System.out.println("Il reste " + nbAllumettes + " allumettes");
+                        System.out.println("Combien d'allumettes souhaitez vous retirer ? (1, 2 ou 3)");
+                        int nbRetirer = entierInt2(nbAllumettes);
+                        nbAllumettes = nbAllumettes - nbRetirer;
+                        turn += 1;
+                        System.out.println("Il reste " + nbAllumettes + " allumettes");
+                    } else if (turn % 2 == 0) {
+                        // l'ordinateur doit jouer et doit laisser au joueur un nombre d'allumettes qui sera un multiple de 4
+                        System.out.println("A l'ordinateur de jouer");
+                        int nbAllumettesRetireesOrdi;
+                        if (nbAllumettes % 4 == 0) {
+                            System.out.println("L'ordinateur retire 3 allumettes");
+                            nbAllumettes -= 3;
+                        } else if (nbAllumettes % 4 == 3) {
+                            System.out.println("L'ordinateur retire 2 allumettes");
+                            nbAllumettes -= 2;
+                        } else if (nbAllumettes % 4 == 2) {
+                            System.out.println("L'ordinateur retire 1 allumette");
+                            nbAllumettes -= 1;
+                        } else {
+                            Random rand = new Random();
+                            nbAllumettesRetireesOrdi = rand.nextInt(3) + 1;
+                            nbAllumettes -= nbAllumettesRetireesOrdi;
+                            System.out.println("L'ordinateur retire " + nbAllumettesRetireesOrdi + " allumettes");
+                        }
+                        turn += 1;
                     }
-                    turn += 1;
+                }
+                }
+            else if (whoPlay == 2) {
+            System.out.println("L'ordinateur commence");
+            while (nbAllumettes > 0) {
+                System.out.println("Il reste " + nbAllumettes + " allumettes");
+                Random rand = new Random();
+                int nbAllumettesRetireesOrdi = rand.nextInt(3) + 1;
+                if (nbAllumettes > 3) {
+                    System.out.println("L'ordinateur retire " + nbAllumettesRetireesOrdi + " allumettes");
+                    nbAllumettes = nbAllumettes - nbAllumettesRetireesOrdi;
+                } else if (nbAllumettes == 3) {
+                    nbAllumettesRetireesOrdi = 2;
+                    System.out.println("L'ordinateur retire " + nbAllumettesRetireesOrdi + " allumettes");
+                    System.out.println("Vous avez perdu !");
+                    break;
+                } else if (nbAllumettes == 2) {
+                    nbAllumettesRetireesOrdi = 1;
+                    System.out.println("L'ordinateur retire " + nbAllumettesRetireesOrdi + " allumettes");
+                    System.out.println("Vous avez perdu !");
+                    break;
+                } else if (nbAllumettes == 1) {
+                    System.out.println("L'ordinateur retire " + nbAllumettesRetireesOrdi + " allumettes");
+                    System.out.println("Vous avez perdu !");
+                    break;
+                }
+                System.out.println("Il reste " + nbAllumettes + " allumettes");
+                System.out.println("Combien d'allumettes souhaitez vous retirer ? (1, 2 ou 3)");
+                int nbRetirer = entierInt2(nbAllumettes);
+                nbAllumettes = nbAllumettes - nbRetirer;
+                    if (nbAllumettes == 1) {
+                        System.out.println("Vous avez gagné !");
+                        break;
+                    }
 
                 }
-                }
+            }
                 if (nbAllumettes == 0){
                     if(turn % 2 == 0){
                         System.out.println("Vous avez perdu");

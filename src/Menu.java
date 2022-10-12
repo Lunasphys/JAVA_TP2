@@ -18,11 +18,11 @@ public class Menu {
     public static void main(String[] args) {
         System.out.println("======== Bonjour, choisissez un exercice ========");
         System.out.println("****************************");
-        System.out.println("======== Exercice 1 : Methode d'Archimede 1/2 ========");
+        System.out.println("======== Exercice 1 : Methode d'Archimede 1/2 =============");
         System.out.println("======== Exercice 2 : Methode d'Archimede 2/2 =============");
-        System.out.println("======== Exercice 3 : Impots ============");
-        System.out.println("======== Exercice 4 : Chance Euromillions =====================");
-        System.out.println("======== Exercice 5 : Jeu de Nim =====================");
+        System.out.println("======== Exercice 3 : Impots ==============================");
+        System.out.println("======== Exercice 4 : Chance Euromillions =================");
+        System.out.println("======== Exercice 5 : Jeu de Nim ==========================");
         System.out.println("Quel exercice souhaitez-vous faire ?");
         int value = utils.entierInt();
         while (true) {
