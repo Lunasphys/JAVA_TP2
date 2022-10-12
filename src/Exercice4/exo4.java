@@ -57,9 +57,7 @@ public class exo4 {
                     System.out.println("Cnp(50,5) x Cnp(11,2) = " + result);
                     main(args);
                 case 5 :
-                    System.out.println("Au revoir");
-                    System.exit(0);
-                    break;
+                    Menu.main(args);
                 //Test la fonction Cnp et ensuite faite le calcul Cnp(50,5) *Cnp(11,2) il doit être égale a 116 531 800
             }
             System.out.println("Veuillez entrer un nombre entre 1 et 5");
